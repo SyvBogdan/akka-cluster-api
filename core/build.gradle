@@ -1,0 +1,38 @@
+plugins {
+    id 'scala'
+    id 'java-library'
+}
+
+group 'org.scala.test.core'
+version '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    // https://mvnrepository.com/artifact/org.typelevel/cats-core
+
+    api('org.scala-lang:scala-library:2.12.10')
+
+    api group: 'org.typelevel', name: 'cats-core_2.12', version: '2.7.0'
+
+    api('com.typesafe.akka:akka-http_2.12:10.2.10')
+    api('com.typesafe.akka:akka-stream_2.12:2.7.0')
+    api('com.typesafe.akka:akka-slf4j_2.12:2.7.0')
+    // https://mvnrepository.com/artifact/com.typesafe.akka/akka-cluster
+    api group: 'com.typesafe.akka', name: 'akka-cluster_2.12', version: '2.7.0'
+
+    // https://mvnrepository.com/artifact/com.lightbend.akka.management/akka-management-cluster-bootstrap
+    //  implementation group: 'com.lightbend.akka.management', name: 'akka-management-cluster-bootstrap_2.12', version: '1.2.0'
+
+
+    //implementation('com.enragedginger:akka-quartz-scheduler_2.12:1.8.1-akka-2.5.x')
+    // https://mvnrepository.com/artifact/com.typesafe.akka/akka-discovery
+    // implementation group: 'com.typesafe.akka', name: 'akka-discovery_2.12', version: '2.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}

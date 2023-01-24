@@ -1,0 +1,5 @@
+rootProject.name = 'akka-cluster-api'
+include 'leader'
+include 'core'
+include 'follower'
+
